@@ -1,3 +1,4 @@
+import Contact from "@/component/Contact";
 import Experience from "@/component/Experience";
 import Hero from "@/component/Hero";
 import Projects from "@/component/Projects";
@@ -10,6 +11,7 @@ const Home = () => {
       <Projects />
       <Experience />
       <Skills />
+      <Contact />
     </div>
   );
 };
