@@ -1,11 +1,12 @@
 const Hero = () => {
   return (
-    <div className="flex justify-start items-start w-full flex-col lg:gap-y-2">
+    <div className="flex justify-start items-start w-full flex-col lg:gap-y-2 lg:mb-10 lg:mt-24">
       <h5 className="lg:text-lg font-semibold uppercase tracking-wide">
         Full-Stack Engineer & AI Specialist
       </h5>
       <h1 className="lg:text-7xl w-[60%] font-bold capitalize">
-        AI Engineering & Full-Stack Solutions.
+        AI Engineering &<br />
+        Full-Stack Solutions.
       </h1>
       <p className="lg:text-base font-medium w-[60%] lg:mt-4">
         Building intelligent agents and SaaS platforms that solve real-world
