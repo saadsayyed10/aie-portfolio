@@ -1,4 +1,41 @@
+"use client";
+
+import axios from "axios";
+import { useState } from "react";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [vision, setVision] = useState("");
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    if (!name || !email || !vision) {
+      alert("Name, Email and Detail: All are required");
+      return;
+    }
+    setIsLoading(true);
+    try {
+      await axios.post("http://localhost:3000/api/message", {
+        name,
+        email,
+        vision,
+      });
+      alert(
+        `Hey ${name}, I have received your message, I will contact you as soon as possible. Thank ya.`,
+      );
+
+      setName("");
+      setEmail("");
+      setVision("");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="flex justify-center items-center w-full lg:p-10 border rounded-lg">
       <div className="flex justify-center items-start w-full lg:gap-x-6">
@@ -22,8 +59,21 @@ const Contact = () => {
               Inquiry Name
             </span>
             <input
-              className="w-full border rounded-lg placeholder:lg:text-sm text-sm"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full border rounded-lg placeholder:lg:text-sm text-sm lg:py-1 lg:px-2"
               placeholder="Who are you?"
+            />
+          </div>
+          <div className="flex justify-start items-start w-full flex-col lg:gap-y-1 lg:mt-2">
+            <span className="lg:text-sm font-medium uppercase">
+              Inquiry Email
+            </span>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full border rounded-lg placeholder:lg:text-sm text-sm lg:py-1 lg:px-2"
+              placeholder="Your business or regular email ID"
             />
           </div>
           <div className="flex justify-start items-start w-full flex-col lg:gap-y-1 lg:mt-2">
@@ -31,13 +81,19 @@ const Contact = () => {
               Project Details
             </span>
             <textarea
-              className="w-full border rounded-lg placeholder:lg:text-sm text-sm"
+              value={vision}
+              onChange={(e) => setVision(e.target.value)}
+              className="w-full border rounded-lg placeholder:lg:text-sm text-sm lg:py-1 lg:px-2"
               placeholder="Briefly describe your vision..."
               cols={20}
               rows={10}
             />
-            <button className="w-full lg:px-4 lg:py-1.5 border rounded-lg lg:mt-4">
-              Send Message
+            <button
+              onClick={handleSubmit}
+              disabled={isLoading}
+              className="w-full lg:px-4 lg:py-1.5 border rounded-lg lg:mt-4 cursor-pointer"
+            >
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
           </div>
         </div>
