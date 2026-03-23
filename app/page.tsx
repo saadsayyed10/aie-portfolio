@@ -1,6 +1,7 @@
 import Experience from "@/component/Experience";
 import Hero from "@/component/Hero";
 import Projects from "@/component/Projects";
+import Skills from "@/component/Skills";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <Projects />
       <Experience />
+      <Skills />
     </div>
   );
 };
