@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("/fonts/Unbounded.ttf") format("ttf");
+}
+
+@theme {
+  --font-unbounded: Unbounded, san-serif;
+}
