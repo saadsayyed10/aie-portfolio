@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/component/Navbar";
+import Footer from "@/component/Footer";
 
 export const metadata: Metadata = {
   title: "Saad Sayyed SWE",
@@ -19,7 +20,9 @@ export default function RootLayout({
           <Navbar />
         </header>
         <main className="min-h-full flex flex-col">{children}</main>
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
