@@ -10,7 +10,7 @@ const Hero = () => {
         <span className="border-b-4 border-green-500">Full-Stack</span>{" "}
         Solutions<span className="text-green-500">.</span>
       </h1>
-      <p className="lg:text-base font-medium w-[60%] lg:mt-4">
+      <p className="lg:text-base font-medium w-[60%] lg:my-8 text-white">
         Building intelligent agents and SaaS platforms that solve real-world
         problems. Synthesizing advanced logic with ethereal user experiences.
       </p>
