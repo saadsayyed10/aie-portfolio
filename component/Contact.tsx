@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full lg:p-10 border rounded-lg bg-black/20">
+    <div className="flex justify-center items-center w-full lg:p-10 border-2 rounded-lg border-green-500 lg:mb-20">
       <div className="flex justify-center items-start w-full lg:gap-x-6 rounded-lg">
         <div className="flex justify-start items-start w-full flex-col lg:gap-y-6">
           <h2 className="lg:text-5xl font-bold text-white">
