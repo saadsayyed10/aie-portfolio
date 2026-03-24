@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Projects = () => {
   return (
     <div className="flex justify-start items-start flex-col w-full lg:gap-y-6 bg-black">
@@ -42,10 +44,20 @@ const Projects = () => {
           </ul>
           <div className="flex justify-between items-center w-full lg:mt-20">
             <button className="border-green-500 border-2 text-black rounded-md font-semibold cursor-pointer bg-green-500 hover:bg-green-500/80 hover:border-green-500/80 transition duration-300 lg:px-4 lg:py-1 lg:text-sm">
-              Check Out
+              <Link
+                target="_blank"
+                href={"https://pexer-production.vercel.app/"}
+              >
+                Check Out
+              </Link>
             </button>
             <button className="border-green-500 border-2 text-white rounded-md font-semibold cursor-pointer hover:bg-green-500/40 transition duration-300 lg:px-4 lg:py-1 lg:text-sm">
-              Source Code
+              <Link
+                target="_blank"
+                href={"https://github.com/saadsayyed10/pexer-production"}
+              >
+                Source Code
+              </Link>
             </button>
           </div>
         </div>
@@ -71,10 +83,20 @@ const Projects = () => {
           </ul>
           <div className="flex justify-between items-center w-full lg:mt-20">
             <button className="border-green-500 border-2 text-black rounded-md font-semibold cursor-pointer bg-green-500 hover:bg-green-500/80 hover:border-green-500/80 transition duration-300 lg:px-4 lg:py-1 lg:text-sm">
-              Check Out
+              <Link
+                target="_blank"
+                href={"https://barb-production.vercel.app/"}
+              >
+                Check Out
+              </Link>
             </button>
             <button className="border-green-500 border-2 text-white rounded-md font-semibold cursor-pointer hover:bg-green-500/40 transition duration-300 lg:px-4 lg:py-1 lg:text-sm">
-              Source Code
+              <Link
+                target="_blank"
+                href={"https://github.com/saadsayyed10/barb-production"}
+              >
+                Source Code
+              </Link>
             </button>
           </div>
         </div>
