@@ -3,7 +3,10 @@ const Projects = () => {
     <div className="flex justify-start items-start flex-col w-full lg:gap-y-6 bg-black">
       <div className="flex justify-between items-center w-full">
         <div className="flex justify-start items-start w-full flex-col lg:gap-y-2">
-          <h6 className="lg:text-lg font-semibold uppercase tracking-wide text-green-500">
+          <h6
+            id="Projects"
+            className="lg:text-lg font-semibold uppercase tracking-wide text-green-500"
+          >
             Featured Works
           </h6>
           <h2 className="lg:text-5xl font-bold text-white">

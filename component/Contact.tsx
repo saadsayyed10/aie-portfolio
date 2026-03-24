@@ -43,7 +43,10 @@ const Contact = () => {
           <h2 className="lg:text-5xl font-bold text-white">
             Let<span className="text-green-500">&apos;</span>s build the
             <br />
-            next frontier<span className="text-green-500">.</span>
+            next frontier
+            <span id="Contact" className="text-green-500">
+              .
+            </span>
           </h2>
           <p className="lg:text-base font-medium text-white">
             Available for high-impact AI engineering roles and complex SaaS
