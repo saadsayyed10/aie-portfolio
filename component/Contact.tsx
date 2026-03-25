@@ -17,7 +17,7 @@ const Contact = () => {
     }
     setIsLoading(true);
     try {
-      await axios.post("http://localhost:3000/api/message", {
+      await axios.post("https://saad-aie-portfolio.vercel.app/api/message", {
         name,
         email,
         vision,
